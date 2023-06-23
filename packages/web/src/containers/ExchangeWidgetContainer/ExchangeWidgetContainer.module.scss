@@ -1,0 +1,14 @@
+@import '~styles/variables';
+
+.componentHeading {
+  text-align: center;
+  margin: 0 !important;
+  padding: 0.72rem 0;
+  background-color: var(--background-4);
+  border-top-right-radius: $border-radius;
+  border-top-left-radius: $border-radius;
+
+  &.smHeading {
+    padding: 0.35rem 0;
+  }
+}

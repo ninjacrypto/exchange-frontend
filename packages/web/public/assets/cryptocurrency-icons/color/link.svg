@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="125px" height="125px" viewBox="0 0 125 125" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>link</title>
+    <desc>Created with Sketch.</desc>
+    <g id="link" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0,62.5 C0,27.980957 27.980957,0 62.5,0 C97.019043,0 125,27.9858398 125,62.5 C125,97.0141602 97.0166016,125 62.5,125 C27.9833984,125 0,97.019043 0,62.5 Z" id="Path" fill="#2A5ADA" fill-rule="nonzero"></path>
+        <g transform="translate(20.000000, 14.000000)" fill="#FFFFFF" fill-rule="nonzero" id="Shape">
+            <path d="M42.5,0 L33.505291,5.11697248 L8.99470899,19.1330275 L0,24.25 L0,72.75 L8.99470899,77.8669725 L33.7301587,91.8830275 L42.7248677,97 L51.7195767,91.8830275 L76.005291,77.8669725 L85,72.75 L85,24.25 L76.005291,19.1330275 L51.494709,5.11697248 L42.5,0 Z M17.989418,62.516055 L17.989418,34.483945 L42.5,20.4678899 L67.010582,34.483945 L67.010582,62.516055 L42.5,76.5321101 L17.989418,62.516055 Z"></path>
+        </g>
+    </g>
+</svg>

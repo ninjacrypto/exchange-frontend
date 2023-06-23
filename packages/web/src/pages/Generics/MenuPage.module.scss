@@ -1,0 +1,22 @@
+@import '~styles/variables';
+@import '~bulma/sass/utilities/_all';
+
+.menuPage {
+  padding: 3rem 1.5rem;
+
+  @include tablet {
+    .tabs {
+      margin: -3rem -1.5rem;
+    }
+  }
+
+  @include mobile {
+    .tabs {
+      margin: -3rem -0.5rem;
+    }
+  }
+
+  @include desktop {
+    padding: 2rem;
+  }
+}

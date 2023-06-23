@@ -1,0 +1,45 @@
+@import '~styles/variables';
+@import '~bulma/sass/utilities/_all';
+
+.homePage {
+  background-color: var(--background-1);
+  min-height: 500px;
+
+  // @include tablet {
+  //   padding: 20px 100px;
+  // }
+}
+
+.boxy {
+  padding: 12px 0;
+  align-items: center;
+  color: var(--defaultTextColor);
+  background-color: var(--background-3);
+}
+
+.level {
+  .levelItem {
+    position: relative;
+    cursor: pointer;
+
+    &.isActive {
+      color: var(--primary);
+      font-weight: 600;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        height: 2px;
+        width: 39px;
+        background-color: var(--primary);
+      }
+    }
+  }
+}
+
+.coinWrap {
+  display: flex;
+  align-items: center;
+}
+

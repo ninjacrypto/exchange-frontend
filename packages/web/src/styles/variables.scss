@@ -1,0 +1,72 @@
+// Colors
+$ebony: #120F22;
+$ebony-lighter: #241f33;
+$green: #26BF22;
+$red: #DB2327;
+$orange: #fb843f;
+$gun-powder: #42404f;
+$grey-darker: #312e3f;
+$grey-lighter: #64626f;
+
+// Bulma color overrides
+$dark: $ebony-lighter;
+$black-ter: $ebony;
+$grey: $gun-powder;
+// $light: $grey-darker;
+$primary: $red;
+$link: $primary;
+
+// Bulma spacing
+$gap: 32px;
+
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/functions";
+@import "~bulma/sass/utilities/derived-variables";
+
+// General Variables
+$inputBorder: 1px solid rgba(255, 255, 255 ,0.1);
+$inputBorderFocused: 1px solid rgba(255, 255, 255 ,0.3);
+$scrollBarColor: slategray;
+$htmlColor: #f5f5f5;
+
+$border-radius: 3px;
+
+// Table
+$tableBoxShadow: 0 2px 10px rgba(0, 0, 0, 0.10);
+$tableRowBorderBottom: 1px solid rgba(255, 255, 255, 0.20);
+$tablePaginationDisabled: #a5a5a5;
+
+// Bulma property overrides
+
+// Spacing
+$navbar-height: 3.625rem;
+$bottombar-height: 6.25rem;
+
+// Typography
+$text: var(--defaultTextColor);
+$family-primary: 'ProximaRegular', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$title-color: var(--defaultTextColor);
+$label-color: var(--defaultTextColor);
+$text-strong: var(--defaultTextColor);
+$link-hover: var(--defaultTextColor);
+
+// Menu
+$menu-item-active-background-color: var(--background-5);
+$menu-item-hover-background-color: var(--background-5);
+$menu-item-hover-color: var(--defaultTextColor);
+
+// Tabs
+$tabs-link-color: var(--defaultTextColor);
+$tabs-border-bottom-color: var(--white);
+$tabs-link-active-border-bottom-color: var(--primary);
+$tabs-link-active-color: var(--primary);
+$tabs-link-hover-border-bottom-color: var(--primaryHover);
+$tabs-link-hover-color: var(--primaryHover);
+$tabs-background-color: var(--background-4);
+
+// Footer
+$footer-padding: 1.5rem; // Doesn't seem to work right now...
+
+// Card Modal
+$modal-card-body-background-color: var(--background-5);
+$modal-card-head-background-color: var(--background-3);

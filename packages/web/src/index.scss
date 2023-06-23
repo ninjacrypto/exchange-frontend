@@ -1,0 +1,78 @@
+/*! Copyright 2019 by Bytedex Global, Inc. Scottsdale, AZ USA */
+@import-normalize;
+@import '~styles/fonts';
+@import '~styles/variables';
+@import '~bulma/bulma';
+@import '~bulma-extensions';
+@import '~react-toastify/scss/main';
+@import '~axios-progress-bar/dist/nprogress.css';
+@import '~styles/overrides/bulma';
+
+@import '~styles/helpers';
+@import '~styles/utils';
+@import '~styles/overrides/ReactTable';
+@import '~styles/overrides/ReactSelect';
+
+html {
+  overflow-y: auto;
+  background-color: $htmlColor;
+}
+
+// Recharts overrides
+
+.recharts-surface {
+  overflow: visible;
+}
+
+// Axios Progress Bar Overrides
+
+#nprogress .bar {
+  height: 5px;
+  background: var(--loadingColor) !important;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px var(--loadingColor), 0 0 5px var(--loadingColor) !important;
+}
+
+#nprogress .spinner-icon {
+  border-top-color: var(--loadingColor) !important;
+  border-left-color: var(--loadingColor) !important;
+}
+
+// Disable Number Input arrows
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@include scrollbars(.5em, $scrollBarColor);
+
+:root {
+  --red: #{$red};
+  --green: #{$green};
+  --white: #{$white};
+  --bidColor: #{$green};
+  --askColor: #{$red};
+  --primary: var(--red);
+  --loadingColor: var(--primary);
+  --background-1: #{$ebony};
+  --background-2: #{$ebony-lighter};
+  --background-3: #{$grey-darker};
+  --background-4: #{$gun-powder};
+  --background-5: #{$grey-lighter};
+  --defaultTextColor: #{$white};
+  --defaultTextColorDarken: #d9d9d9;
+  --tableBackground: var(--background-2);
+  --tableHeadBackground: var(--background-4);
+  --errorPageBackground: #{$white};
+  --skinnyBarBackground: var(--background-1);
+  --navBarBackground: var(--background-2);
+  --footerBackground: var(--background-2);
+}

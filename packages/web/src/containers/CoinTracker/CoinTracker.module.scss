@@ -1,0 +1,42 @@
+@import '~styles/variables';
+@import '~bulma/sass/utilities/_all';
+
+.homePage {
+  background-color: var(--background-1);
+  min-height: 500px;
+
+  @include tablet {
+    padding: 20px 100px;
+  }
+}
+
+.level {
+  .levelItem {
+    position: relative;
+    cursor: pointer;
+
+    &.isActive {
+      color: var(--primary);
+      font-weight: 600;
+      border-bottom: 2px solid var(--primary);
+    }
+  }
+}
+
+.ReactTable {
+  font-size: 0.7rem;
+}
+
+.coinWrap {
+  display: flex;
+  align-items: center;
+
+  .icon {
+    height: 15px;
+    width: 15px;
+  }
+}
+
+.tr {
+  cursor: pointer;
+}

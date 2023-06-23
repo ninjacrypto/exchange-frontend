@@ -1,0 +1,8 @@
+@import '~styles/variables';
+@import '~bulma/sass/utilities/_all';
+
+.flxflow{
+    @media screen and (max-width: 768px) {
+      flex-flow: wrap;
+    }
+  }

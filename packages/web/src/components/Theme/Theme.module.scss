@@ -1,0 +1,45 @@
+@import '~styles/variables';
+@import '~bulma/sass/utilities/_all';
+
+.dropdown {
+
+  >div+div {
+    @media screen and (max-width: 769px) {
+      left: auto;
+      right: 50% !important;;
+      transform: translateX(50%) !important;;
+    }
+  }
+
+  button {
+    background-color: transparent !important;
+    border: 1px solid $white;
+    color: var(--defaultTextColor) !important;
+
+    >span:last-child {
+      display: none;
+    }
+
+    @include tablet {
+      border: 0;
+    }
+  }
+
+  >div+div>div {
+    background-color: var(--background-4) !important;
+    padding: 1rem !important;
+    color: var(--defaultTextColor) !important;
+    cursor: pointer;
+    text-align: center;
+
+    @include tablet {
+      text-align: left;
+    }
+
+    >div {
+      &:hover {
+        background-color: var(--background-5);
+      }
+    }
+  }
+}

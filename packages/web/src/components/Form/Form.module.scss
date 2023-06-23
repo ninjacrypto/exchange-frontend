@@ -1,0 +1,48 @@
+@import '~styles/variables';
+
+.input {
+  max-width: 100%;
+  width: 100%;
+  margin: 14px 0;
+  padding: 8px;
+  outline: none;
+  color: var(--defaultTextColor);
+  background: transparent;
+  box-shadow: none;
+  border: 0;
+  border-bottom: $inputBorder;
+  border-radius: 0;
+  transition: all .3s;
+
+  &.iconleft {
+    padding: 8px 0 8px 30px;
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: 3%;
+  }
+
+  &.iconright {
+    background-repeat: no-repeat;
+    background-position: 98%;
+  }
+
+  &:focus {
+    border-bottom: $inputBorderFocused;
+  }
+
+  &::placeholder {
+    color: var(--whiteHover);
+  }
+}
+
+
+.errorMessage {
+  color: var(--red);
+}
+
+.dropZone {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

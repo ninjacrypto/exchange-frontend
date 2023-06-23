@@ -1,0 +1,29 @@
+@import '~styles/variables';
+@import '~bulma/sass/utilities/_all';
+
+.container {
+  background-color: var(--errorPageBackground) !important;
+
+  .heading {
+    color: $black;
+    margin: 1rem 2rem 0;
+    text-align: center;
+    font-size: 1.2rem;
+
+    @include tablet {
+      margin: 3rem 0 0;
+      font-size: 2rem;
+    }
+  }
+
+  img {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+.buttonBox {
+  margin-top: 1rem;
+  text-align: center;
+}

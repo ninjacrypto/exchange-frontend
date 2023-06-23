@@ -1,0 +1,67 @@
+@import '~styles/variables';
+@import '~bulma/sass/utilities/_all';
+
+.bottomBar {
+  text-align: justify;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+  text-align: center;
+  opacity: 0.4;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem auto;
+
+  a {
+    margin: 0 1rem;
+  }
+
+  .appButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 40px;
+    padding: 0 15px 0 10px;
+    margin: 0.5rem 0;
+    font-size: 14px;
+    color: var(--defaultTextColor);
+    background-color: var(--background-5);
+    opacity: 0.85;
+    border-radius: $border-radius;
+    transition: all .3s;
+
+    @include touch {
+      width: 100%;
+    }
+
+    &:hover {
+      color: var(--background-1);
+      opacity: 1;
+    }
+  }
+
+  @include tablet {
+    flex-direction: row;
+
+    .appButton {
+      margin: 0 0.25rem;
+    }
+  }
+}
+
+
+.icon {
+  width: auto;
+  height: 12px;
+  margin-right: 13px;
+}

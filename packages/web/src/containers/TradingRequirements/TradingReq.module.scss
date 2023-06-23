@@ -1,0 +1,26 @@
+@import '~styles/variables';
+@import '~bulma/sass/utilities/_all';
+
+.customizedColumns  {
+    margin-top: 0px !important;
+  }
+  
+  .customizedColumns:last-child {
+    margin-bottom: 0px !important;
+  }
+  
+  .customizedColumns:not(:last-child) {
+    margin-bottom: 0px !important;
+  }
+  
+  .customizedColumn {
+    padding: 0rem 0.75rem !important;
+    text-align: inherit;
+  }
+  
+  @media screen and (max-width: 450px) {
+    .customizedColumn {
+        padding: 0rem 0.75rem !important;
+        text-align: inherit;
+    }
+  }

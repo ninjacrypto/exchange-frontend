@@ -1,0 +1,143 @@
+@import '~styles/variables';
+@import '~bulma/sass/utilities/_all';
+
+.ask {
+  color: var(--red);
+}
+
+.bid {
+  color: var(--green);
+}
+
+//* ApiKeysTable
+.formContainer {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 500px) {
+    padding: 50px 75px;
+  }
+
+  .buttonGroup {
+    display: flex;
+    justify-content: space-around;
+    order: 1;
+    margin-top: 2rem;
+
+    button {
+      min-width: 100px;
+      margin: 0 1rem;
+
+      @media screen and (min-width: 500px) {
+        min-width: 175px;
+      }
+    }
+  }
+}
+
+//* Table Wrapper Filter
+.input {
+  background-color: transparent;
+  color: var(--defaultTextColor);
+
+  &::placeholder {
+    color: var(--defaultTextColorDarken);
+  }
+}
+
+//* Modal Deposit/Withdrawals
+.pre {
+  text-align: left;
+  padding: 0.5rem 1rem;
+}
+
+.rowInfo {
+  word-break: break-word;
+
+  strong {
+    text-transform: capitalize;
+    margin-right: 0.5rem;
+  }
+}
+
+.walletBalTextBox {
+  opacity: 1 !important;
+}
+
+.coinWrap {
+  display: flex;
+  align-items: center;
+
+  .coinIcon {
+    margin-right: 14px;
+    height: 25px;
+  }
+}
+
+.divider {
+  box-sizing: border-box;
+    margin: 0px 4px;
+    min-width: 0px;
+    width: 1px;
+    height: 12px;
+    background-color: #eaecef;
+}
+
+.actionIconButtonGroup {
+  display: flex;
+  align-items: center;
+}
+
+.actionIconButton {
+  display: flex !important;
+  padding: 5px !important;
+  margin: 5px !important;
+}
+
+.actionIconButton > span {
+  line-height: 14px !important;
+}
+
+.formLabel {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-bottom: 6px;
+  color: var(--defaultTextColor);
+  font-weight: bold;
+}
+
+.smallInput {
+  background: none;
+  border: 0px;
+  border-bottom: 1px solid var(--border-1);
+  width: 120px;
+  color: var(--defaultTextColor);
+  font-size: 16px;
+  text-align: center;
+  outline: none
+}
+
+.customizedColumns  {
+  margin-top: 0px !important;
+}
+
+.customizedColumns:last-child {
+  margin-bottom: 0px !important;
+}
+
+.customizedColumns:not(:last-child) {
+  margin-bottom: 0px !important;
+}
+
+.customizedColumn {
+  padding: 0rem 0.75rem !important;
+  text-align: inherit;
+}
+
+@media screen and (max-width: 450px) {
+  .customizedColumn {
+      padding: 0rem 0.75rem !important;
+      text-align: inherit;
+  }
+}

@@ -1,0 +1,271 @@
+@import '~styles/variables';
+@import '~bulma/sass/utilities/_all';
+
+.menu-page {
+  background-color: var(--background-1);
+  margin: 0 auto;
+}
+
+.accountPageOuterBox {
+  @media screen and (max-width: 450px) {
+    padding: 1.25rem 0.25rem 0;
+  }
+}
+
+.accountPageTableBox {
+  @media screen and (max-width: 450px) {
+    padding: 0.25rem;
+  }
+}
+
+.userInitials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  font-size: 3.125rem;
+  text-transform: uppercase;
+  border-radius: 50%;
+  background-color: var(--background-5);
+
+  @include tablet {
+    width: 147px;
+    height: 147px;
+  }
+}
+
+.link {
+  &:hover {
+    color: var(--defaultTextColorDarken);
+  }
+}
+
+.columns {
+  padding: 1rem;
+  text-align: center;
+
+  .leftColumn {
+    position: relative;
+  }
+
+  .rightColumn {
+    margin-left: auto;
+  }
+
+  @include tablet {
+    text-align: left;
+    justify-content: space-between;
+  }
+}
+
+.boxContainer {
+  min-height: 520px;
+  padding: 0;
+
+  .infoWrap {
+    margin: 1.6rem;
+    padding: 10px;
+
+    &.authForm {
+      text-align: center;
+
+      img {
+        max-width: 175px;
+      }
+
+      input {
+        text-align: center;
+      }
+    }
+
+    button {
+      height: auto;
+    }
+  }
+
+  @include tablet {
+    padding: 1.25rem;
+  }
+}
+
+
+.secretKeyContanier {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+
+  .qrContainer {
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    background: var(--background-5);
+    word-break: break-word;
+    white-space: initial;
+    padding: 24px;
+    margin-top: 20px;
+
+    @include tablet {
+      padding: 12px;
+      margin: 0;
+    }
+  }
+
+  .secretKeyText {
+    display: flex;
+    font-size: 1.1rem;
+    background: transparent;
+
+    .padlockIcon {
+      height: 22px;
+      margin-right: 8px;
+    }
+  }
+}
+
+.authEnabledTextContainer {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+
+  .authEnabledText {
+    display: block;
+  }
+
+  @media screen and (min-width: 560px) {
+    font-size: 1.5rem;
+
+    .authEnabledText {
+      display: inline;
+    }
+  }
+}
+
+.accountVerificationContainer {
+  margin-bottom: 1rem;
+
+  // .accountVerificationTag {
+  //   height: auto;
+  //   align-items: center;
+  //   justify-content: center;
+  //   font-size: 1rem;
+  //   background: var(--background-5);
+  //   word-break: break-word;
+  //   white-space: initial;
+  //   padding: 24px;
+  //   margin-top: 20px;
+
+  //   @include tablet {
+  //     padding: 12px;
+  //     margin: 0;
+  //   }
+  // }
+
+  .avatarIcon {
+    margin-right: 1rem;
+    font-size: 1em;
+  }
+
+  .verificationIcon {
+    font-size: 0.85em;
+    margin-left: 3rem;
+
+    &.approved {
+      color: var(--green);
+    }
+
+    &.pending {
+      color: $orange;
+    }
+
+    &.rejected {
+      color: var(--red);
+    }
+
+    &.requestInfo {
+      color: $orange;
+    }
+
+    &.notSubmitted {
+      color: $blue;
+    }
+  }
+}
+
+.referralContainer {
+  .shareContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+
+  .referralTag {
+      height: auto;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      background: var(--background-5);
+      word-break: break-word;
+      white-space: initial;
+      padding: 24px;
+      margin-top: 20px;
+
+      @include tablet {
+        padding: 12px;
+        margin: 0;
+      }
+
+      &+ span {
+        padding: 1rem 1rem 0;
+        font-size: 1rem;
+        font-style: italic;
+        text-align: center;
+
+        @include tablet {
+          padding: 0;
+          margin-left: 2rem;
+          text-align: left;
+        }
+      }
+  }
+
+  .referralId {
+    margin-bottom: 10px;
+  }
+
+  .levelItem {
+    text-align: center;
+  }
+}
+
+.generateApiKeyForm {
+  padding: 50px;
+
+  .button {
+    background-color: var(--green);
+
+    &:hover {
+      background-color: var(--green);
+    }
+  }
+}
+
+.alertColor {
+  color: var(--red);
+}
+
+.form {
+  width: 100%;
+}
+
+.errorMessage {
+  color: var(--red);
+}

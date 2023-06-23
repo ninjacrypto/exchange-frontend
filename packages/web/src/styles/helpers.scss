@@ -1,0 +1,148 @@
+@import "~styles/variables";
+// ? Move to own helpers or utils folder later
+// * Can import utils/other files here - e.g. @import 'utils/spacing.scss'
+// *SPACINGS
+$sizeUnit: rem;
+$marginKey: 'm';
+$paddingKey: 'p';
+$separator: '-';
+$helperSizes: (('none', 0),
+('xxs', 0.125),
+('xs', 0.25),
+('sm', 0.5),
+('md', 1),
+('lg', 2),
+('xl', 4),
+('xxl', 8),
+);
+$positions: (('t', 'top'),
+('r', 'right'),
+('b', 'bottom'),
+('l', 'left'));
+
+@function sizeValue($key, $value) {
+  @return if($key=='none', 0, $value + $sizeUnit);
+}
+
+@each $size in $helperSizes {
+  $sizeKey: nth($size, 1);
+  $sizeValue: nth($size, 2);
+
+  .#{$marginKey}#{$separator}#{$sizeKey} {
+    margin: sizeValue($sizeKey, $sizeValue);
+  }
+
+  .#{$paddingKey}#{$separator}#{$sizeKey} {
+    padding: sizeValue($sizeKey, $sizeValue);
+  }
+
+  @each $position in $positions {
+    $posKey: nth($position, 1);
+    $posValue: nth($position, 2);
+
+    .#{$marginKey}#{$separator}#{$posKey}#{$separator}#{$sizeKey} {
+      margin-#{$posValue}: sizeValue($sizeKey, $sizeValue);
+    }
+
+    .#{$paddingKey}#{$separator}#{$posKey}#{$separator}#{$sizeKey} {
+      padding-#{$posValue}: sizeValue($sizeKey, $sizeValue);
+    }
+  }
+}
+
+// * GENERAL HELPERS
+
+.fullwidth {
+  width: 100%;
+}
+
+.has-full-height {
+  height: 100%;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-v-height {
+  min-height: calc(100vh - #{$navbar-height});
+  height: calc(100vh - #{$navbar-height});
+}
+
+// .full-vh-height {
+//   min-height: calc(100vh - (#{$navbar-height} + #{$bottombar-height}));
+//   height: calc(100vh - (#{$navbar-height} + #{$bottombar-height}));
+//   overflow-y: auto;
+// }
+
+.react-virtualized-container-fix {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.message-border-right {
+  border-width: 0 4px 0 0;
+}
+
+.top-border-radius {
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+}
+
+.monospace-numbers {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.draggableHandle {
+  cursor: grab;
+}
+
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
+  ::-webkit-scrollbar {
+      width:  $size;
+      height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: var(--primary);
+  }
+
+
+  ::-webkit-scrollbar-track {
+      background: $background-color;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: var(--primary);
+    scrollbar-track-color: $background-color;
+  }
+}
+
+// for firefox - may not work & not setup properly
+@-moz-document url-prefix('http://'),url-prefix('https://') {
+    scrollbar {
+       -moz-appearance: none !important;
+       background: var(--primary) !important;
+    }
+
+    scrollbarbutton {
+       display: none !important;
+    }
+    scrollbar[orient="vertical"] {
+      min-width: 15px !important;
+    }
+}
+
+.pointer {
+  cursor: pointer;
+}

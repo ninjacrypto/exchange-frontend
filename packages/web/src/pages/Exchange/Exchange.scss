@@ -1,0 +1,41 @@
+@import '~styles/variables';
+
+.Exchange {
+  font-size: 0.7rem;
+}
+
+// Overrides for ReactVirtualized Table Styles
+.ReactVirtualized {
+  &__Table {
+    &__ {
+      &headerColumn {
+        display: flex;
+        margin-right: 5px;
+        &:first-of-type {
+          margin-left: 5px;
+        }
+      }
+      &headerRow {
+        background-color: var(--background-3);
+      }
+      &row {
+
+      }
+
+      &rowColumn {
+        margin-right: 5px;
+        text-overflow: inherit;
+
+        &:first-of-type {
+          margin-left: 5px;
+        }
+      }
+      &sortableHeaderColumn {
+
+      }
+      &sortableHeaderIcon {
+
+      }
+    }
+  }
+}

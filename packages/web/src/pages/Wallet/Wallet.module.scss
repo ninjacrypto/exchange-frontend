@@ -1,0 +1,102 @@
+@import '~styles/variables';
+@import '~bulma/sass/utilities/_all';
+
+.heading {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.boxContainer {
+
+  .depositAddressWrap {
+    background-color: var(--background-4);
+    padding: 10px;
+    color: var(--defaultTextColor);
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .depositAddressLabel {
+    text-transform: uppercase;
+  }
+
+  .depositAddress {
+    width: 100%;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .depositAddressButton {
+    margin-right: 25px;
+  }
+}
+
+.messageContainer {
+  min-height: 520px;
+  background-color: var(--background-4);
+
+  .messageHeader {
+    background-color: var(--background-2);
+    text-transform: uppercase;
+    justify-content: center;
+  }
+}
+
+.coinWrap {
+  display: flex;
+  align-items: center;
+
+  .coinIcon {
+    margin-right: 14px;
+    height: 25px;
+  }
+}
+
+.disclaimerList {
+  >li {
+    list-style: disc;
+  }
+}
+
+iframe {
+  height: 100%;
+}
+
+.errorMessage {
+  color: var(--red);
+}
+
+.columnsRow {
+  margin-bottom: 0px !important;
+}
+
+.columnsCol {
+  padding-bottom: 0px;
+}
+
+.verificationFieldBox {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+
+  .fieldBox {
+    flex-grow: 1;
+  }
+}
+
+.modifiedBtnAddon {
+  border-radius: 3px !important;
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  height: 41px !important;
+}
+
+.modifiedTextField {
+  border-top-right-radius: 0px  !important;
+    border-bottom-right-radius: 0px !important;
+}

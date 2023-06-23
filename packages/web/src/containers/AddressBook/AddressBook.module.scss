@@ -1,0 +1,24 @@
+@import '~styles/variables';
+@import '~bulma/sass/utilities/_all';
+
+.verificationFieldBox {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+  
+    .fieldBox {
+      flex-grow: 1;
+    }
+  }
+  
+  .modifiedBtnAddon {
+    border-radius: 3px !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    height: 41px !important;
+  }
+  
+  .modifiedTextField {
+    border-top-right-radius: 0px  !important;
+      border-bottom-right-radius: 0px !important;
+  }

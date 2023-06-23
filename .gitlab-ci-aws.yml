@@ -1,0 +1,32 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  image: node:14.15.0
+  script:
+    - yarn global add lerna
+    - lerna bootstrap
+    - cd packages/web
+    - CI=false yarn build
+  artifacts:
+    paths:
+      - packages/web/build
+  environment:
+    name: production
+  only:
+    - master
+
+deploy:
+  stage: deploy
+  image: 
+    name: banst/awscli
+    entrypoint: [""]
+  dependencies:
+    - build
+  script:
+    - aws s3 sync packages/web/build/ s3://$S3_BUCKET_NAME_MASTER/ --exclude ".DS_Store/*" --delete
+    - aws s3 cp s3://$S3_BUCKET_NAME_MASTER/index.html s3://$S3_BUCKET_NAME_MASTER/index.html --metadata-directive REPLACE --cache-control max-age=0
+  only:
+    - master

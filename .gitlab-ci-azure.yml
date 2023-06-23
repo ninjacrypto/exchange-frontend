@@ -1,0 +1,32 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  image: node:14.15.0
+  script:
+  - yarn global add lerna
+  - lerna bootstrap
+  - cd packages/web
+  - CI=false yarn build
+  artifacts:
+      paths:
+      - packages/web/build
+  environment:
+      name: production
+  only:
+  - develop
+
+deploy develop:
+  stage: deploy
+  image: microsoft/azure-cli
+  dependencies:
+    - build
+  script:
+    - az storage blob delete-batch -s "\$web" --connection-string $AZURE_STORAGE_CONNECTION_STRING
+    - az storage blob upload-batch -d "\$web" -s packages/web/build --connection-string $AZURE_STORAGE_CONNECTION_STRING
+  environment:
+      name: production
+  only:
+    - develop

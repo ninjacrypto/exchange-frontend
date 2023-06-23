@@ -1,0 +1,357 @@
+@import '~styles/variables';
+@import '~bulma/sass/utilities/_all';
+
+.sideBtn {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    height: 26px;
+    line-height: 26px;
+    padding-left: 16px;
+    padding-right: 16px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.buy {
+    color: #ffffff;
+    background-color: var(--green);
+    box-shadow: 1px 0px 4px var(--green);
+}
+
+.sell {
+    color: #ffffff;
+    background-color: var(--red);
+    box-shadow: 1px 0px 4px var(--red);
+}
+
+.tabGroup {
+    padding: 5px;
+    margin-right: 10px;
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 4px;
+    margin-right: 10px;
+    border: 1px solid var(--primary);
+}
+
+.BaseCurrenciesTabs {
+    display: flex;
+}
+
+.BaseCurrenciesTabs>div {
+    cursor: pointer;
+    height: 56px;
+    line-height: 58px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.BaseCurrenciesTabs>div:hover {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+}
+
+.activeBaseCurrency {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+}
+
+.topTabs {
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    top: 0;
+}
+
+.p2pForm {
+    padding-left: 24px;
+    padding-right: 24px;
+    background-color: #ffffff;
+}
+
+.p2pContainer {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    max-width: 1136px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+.formLabel {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    margin-bottom: 6px;
+    font-size: 12px;
+    color: var(--defaultTextColor);
+    font-weight: bold;
+}
+
+.p2pTextBox {
+    font-size: 14px;
+    padding: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: #1E2329;
+    height: 38px;
+    border: 1px solid var(--border-1) !important;
+    border-top-left-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+    border-right: 0px !important;
+}
+
+.menuDropdown {
+    position: relative;
+}
+
+.dropdownBtn {
+    cursor: pointer;
+    height: 56px;
+    line-height: 58px;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0px 10px;
+}
+
+.dropdownContent {
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 56px;
+
+    a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+}
+
+.paymentMedthodItem {
+    padding: 6px 10px;
+    border: 1px solid var(--primary);
+    cursor: pointer;
+    border-radius: 4px;
+
+    &:hover {
+        background-color: var(--primary);
+        color: #f9f9f9;
+    }
+}
+
+
+.paymentDivider {
+    border-bottom: 1px solid var(--border-1);
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.colsPad {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.smallInput {
+    background: none;
+    border: 0px;
+    border-bottom: 1px solid var(--border-1);
+    width: 120px;
+    color: var(--defaultTextColor);
+    font-size: 16px;
+    text-align: center;
+    outline: none
+}
+
+.tabBtnGroup {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    justify-content: space-around;
+    border-bottom: 2px solid var(--primary);
+}
+
+.tabBtn {
+    background-color: var(--background-2);
+    width: 50%;
+    padding: 15px;
+    text-align: center;
+    border-radius: 3px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    cursor: pointer;
+}
+
+
+.tabBtnActive {
+    background: var(--primary);
+}
+
+.errorMessage {
+    color: var(--red);
+}
+
+.ellipsisBox {
+    white-space: nowrap;
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.partialBox {
+    padding: 20px 0px !important;
+    border-top: 1px solid var(--border-1);
+    border-bottom: 1px solid var(--border-1);
+    border-radius: 0px !important;
+}
+
+.chatBoxScroll {
+    min-height: 700px;
+    max-height: 700px;
+    overflow-y: auto;
+}
+
+.chatMessages {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+
+    .chatMessagesPanelRight {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        max-width: 80%;
+        margin-bottom: 10px;
+
+        .datePanel {
+            text-align: right;
+        }
+    }
+
+    .chatMessagesPanelLeft {
+        display: flex;
+        flex-direction: column;
+        margin-right: auto;
+        max-width: 80%;
+        margin-bottom: 10px;
+
+        .datePanel {
+            text-align: left;
+        }
+    }
+
+
+    .chatMessagesLeft,
+    .chatMessagesRight {
+        display: flex;
+        flex-shrink: 0;
+    }
+
+    .chatMessagesLeft {
+        background-color: var(--background-2);
+        padding: 1rem;
+        font-size: 14px;
+        border-radius: 15px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .chatMessagesRight {
+        background-color: var(--background-3);
+        padding: 1rem;
+        font-size: 14px;
+        border-radius: 15px;
+        border-bottom-right-radius: 0px;
+    }
+}
+
+.shortName {
+    justify-content: center;
+    padding: 5px !important;
+    background-color: var(--brand);
+    border-radius: 100% !important;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: flex !important;
+    align-items: center;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.listStyling {
+    color: var(--constColor);
+    font-size: 13px;
+}
+
+.boxRow {
+    margin-right: -10px;
+    margin-left: -10px;
+    max-width: unset !important;
+
+    .boxCol {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.customizedColumns  {
+    margin-top: 0px !important;
+}
+
+.customizedColumns:last-child {
+    margin-bottom: 0px !important;
+}
+
+.customizedColumns:not(:last-child) {
+    margin-bottom: 0px !important;
+}
+
+.customizedColumn {
+    padding: 0rem 0.75rem !important;
+    text-align: inherit;
+}
+
+@media screen and (max-width: 450px) {
+    .customizedColumn {
+        padding: 0rem 0.75rem !important;
+        text-align: inherit;
+    }
+}

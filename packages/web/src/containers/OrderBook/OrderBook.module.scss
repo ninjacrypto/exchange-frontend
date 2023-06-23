@@ -1,0 +1,91 @@
+@import "~styles/variables";
+
+.row {
+  cursor: pointer;
+}
+
+.priceIncrease {
+  animation: priceIncrease 3s;
+}
+
+.priceDecrease {
+  animation: priceDecrease 3s;
+}
+
+@keyframes priceDecrease {
+  0% {
+    color: unset;
+  }
+
+  10% {
+    color: var(--askColor);
+  }
+
+  99% {
+    color: var(--askColor);
+  }
+
+  100% {
+    color: unset;
+  }
+}
+
+@keyframes priceIncrease {
+  0% {
+    color: unset;
+  }
+
+  10% {
+    color: var(--bidColor);
+  }
+
+  99% {
+    color: var(--bidColor);
+  }
+
+  100% {
+    color: unset;
+  }
+}
+
+.depthContainer {
+  .depthBar {
+    height: 95%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    &.Ask {
+      background-color: var(--askColor);
+      opacity: 0.15;
+    }
+
+    &.Bid {
+      background-color: var(--bidColor);
+      opacity: 0.15;
+    }
+
+    &.hovered {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(#ffa502, .1);
+    }
+
+    &.tooltip {
+      width: 100%;
+      height: 100%;
+      z-index: 5;
+      left: -50px;
+      pointer-events: none;
+    }
+    
+    &.active-ask {
+      border-top: dashed var(--defaultTextColor) 1px;
+    }
+
+    &.active-bid {
+      border-bottom: dashed var(--defaultTextColor) 1px;
+    }
+  }
+}

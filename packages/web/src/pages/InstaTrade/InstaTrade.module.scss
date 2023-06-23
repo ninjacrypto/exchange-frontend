@@ -1,0 +1,12 @@
+@import '~styles/variables';
+
+
+.currencyCard {
+  border-top: 3px solid transparent;
+  height: 100%;
+  cursor: pointer;
+
+  &.active {
+    border-top: 3px solid var(--primary);
+  }
+}

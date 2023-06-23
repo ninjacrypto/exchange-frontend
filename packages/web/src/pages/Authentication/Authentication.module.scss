@@ -1,0 +1,78 @@
+@import '~styles/variables';
+@import '~bulma/sass/utilities/_all';
+
+.container {
+  padding: 0 20px;
+
+  &.regHeight {
+    padding: 20px;
+    min-height: auto;
+    height: auto;
+    width: 100%;
+
+    @include touch {
+      width: 100%;
+      padding: 20px 50px 20px;
+    }
+  }
+
+  button {
+    height: auto;
+  }
+
+
+  .title {
+    font-size: 40px;
+    margin: 36px 0;
+  }
+
+  @include tablet {
+    height: 100%;
+    padding: 0 70px 60px;
+  }
+}
+
+.AuthenticationContainer {
+  background-color: var(--background-1);
+
+  @include mobile {
+    background-color: var(--background-2);
+  }
+}
+
+.formContainer {
+  background-color: var(--background-2);
+}
+
+.newOtp {
+  margin: 0.15rem auto 1rem;
+  width: 100%;
+  background-color: var(--green);
+}
+
+.requestOtp {
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.changePwContainer {
+  background-color: var(--background-2);
+}
+
+.logo {
+  display: block;
+  margin: 25px auto;
+}
+
+.link {
+  &:hover {
+    color: var(--defaultTextColorDarken)
+  }
+}
+
+.errorMessage {
+  color: var(--red);
+}

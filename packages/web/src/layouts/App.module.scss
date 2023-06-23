@@ -1,0 +1,22 @@
+@import '~styles/variables';
+@import '~bulma/sass/utilities/_all';
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.connectionBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  padding: 1rem;
+  background: var(--background-1);
+}
+
+.connectionBox svg {
+  margin: 0px 5px;
+  padding: 5px;
+}

@@ -1,0 +1,64 @@
+@import '~styles/variables';
+@import '~bulma/sass/utilities/_all';
+
+.navItem {
+  position: static;
+
+  @include desktop {
+    position: relative;
+  }
+
+  &.isActive {
+    background-color: transparent;
+  }
+
+  &.navbarLink {
+    @include desktop {
+      &:after {
+        content: '';
+        position: absolute;
+        left: 10px;
+        bottom: 0;
+        width: 0;
+        min-width: 0;
+        height: 0;
+        background-color: var(--primary);
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: transparent !important; // ! Better way?
+  }
+
+  &:focus {
+    color: inherit !important;
+  }
+
+  &:hover:after,
+  &.isActive:after {
+    width: calc(100% - 20px);
+    height: 2px;
+  }
+}
+
+.navbarBrand {
+  align-items: center;
+
+  .navbar-item {
+    &:hover {
+      background-color: transparent !important;
+    }
+  }
+
+  @include touch {
+    flex-grow: 1;
+  }
+}
+
+img.navIcon {
+  max-height: 1.25rem;
+  margin-right: 15px;
+}

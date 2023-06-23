@@ -1,0 +1,15 @@
+@import '~styles/variables';
+
+.modal {  
+  text-align: center;
+  position: relative;
+  border-top: 25px solid $orange;
+
+  &:before {
+    content: "!";
+    display: block;
+    position: absolute;
+    top: -20%;
+    left: 3%;
+  }
+}
