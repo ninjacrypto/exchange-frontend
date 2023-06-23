@@ -1,5 +1,5 @@
 var setup = {
-  backendUrl: 'https://nodes.bytedex.io',
-  websocketUrl: 'wss://nodes.bytedex.io/ws',
-  tsApiUrl:'https://st-nodes.bytedex.io'
+  backendUrl: 'https://nodes.myntexchange.io',
+  websocketUrl: 'wss://nodes.myntexchange.io/ws',
+  tsApiUrl:'https://st-nodes.myntexchange.io'
 }
